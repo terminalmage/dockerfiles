@@ -1,4 +1,6 @@
-FROM fedora:24
+FROM fedora:25
+
+RUN dnf -y erase vim-minimal
 
 # Install packages
 RUN dnf -y install mock rpm-build hostname zsh tmux vim-enhanced bind-utils telnet net-tools findutils sudo man man-pages less
