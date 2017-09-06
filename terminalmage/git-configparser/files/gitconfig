@@ -1,0 +1,17 @@
+[user]
+        name = Артём Анисимов
+        email = foo@bar.com
+[remote "origin"]
+        url = https://github.com/terminalmage/salt.git
+        fetch = +refs/heads/*:refs/remotes/origin/*
+        fetch = +refs/tags/*:refs/tags/*
+        pushurl = git@github.com:terminalmage/salt.git
+[color "diff"]
+        old = 196
+        new = 39
+[alias]
+        summary =
+        purge-reflog = "!git reflog expire --expire-unreachable=now --all; git gc --prune=now"
+        modified = ! git status --porcelain | awk 'match($1, "M"){print $2}'
+        graph = log --all --decorate --oneline --graph
+        hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short

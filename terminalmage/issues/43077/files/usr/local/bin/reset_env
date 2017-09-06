@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+
+add_keys
+rm -rf /tmp/foo
+yum -y erase zsh

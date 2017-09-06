@@ -1,0 +1,15 @@
+master: localhost
+id: test
+log_level_logfile: debug
+
+engines:
+  - reactor:
+      refresh_interval: 60
+      worker_threads: 10
+      worker_hwm: 10000
+
+reactor:
+  - old_input:
+    - /srv/reactor/old_input_minion.sls
+  - new_input:
+    - /srv/reactor/new_input_minion.sls

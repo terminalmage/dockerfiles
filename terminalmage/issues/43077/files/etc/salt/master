@@ -1,0 +1,7 @@
+log_level_logfile: debug
+
+reactor:
+  - old_input:
+    - /srv/reactor/old_input.sls
+  - new_input:
+    - /srv/reactor/new_input.sls

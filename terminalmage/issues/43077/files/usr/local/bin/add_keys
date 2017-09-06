@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+
+for host in foo bar baz; do
+    cp /etc/salt/pki/master/minions/test /etc/salt/pki/master/minions/$host
+    echo Added key for minion ID $host
+done
